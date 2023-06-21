@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-const uri =
-  "mongodb+srv://mail2sumitjpg:Sumit90@cluster0.ifl16b4.mongodb.net/RESTDATA";
+require("dotenv").config();
+
+const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.ifl16b4.mongodb.net/RESTDATA`;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
