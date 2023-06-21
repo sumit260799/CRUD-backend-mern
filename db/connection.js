@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
 
-const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.ifl16b4.mongodb.net/RESTDATA`;
+const userName = process.env.USER_NAME;
+const password = process.env.PASSWORD;
+const uri = `mongodb+srv://${userName}:${password}@cluster0.ifl16b4.mongodb.net/RESTDATA`;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
